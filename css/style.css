@@ -6,7 +6,9 @@ body {
   .navbar {
     overflow: hidden;
     /* position: fixed; */
-    background-color: yellow; 
+    padding: 25px 45px;
+    /* margin-left: 45px; */
+    /* background-color: yellow;  */
   }
   
   .navbar a {
@@ -15,9 +17,18 @@ body {
     color: black;
     text-align: center;
     padding: 14px 16px;
+    margin-left: 10px;
     text-decoration: none;
   }
+  .navbar a.active {
+    background-color: greenyellow;
+    color: black;
+  }
   
+  .navbar img{
+    float: left;
+    margin: 0 10%;
+  }
   .subnav {
     float: left;
     overflow: hidden;
@@ -35,35 +46,41 @@ body {
   }
   
   .navbar a:hover, .subnav:hover .subnavbtn {
-    background-color: red;
+    /* background-color: red; */
+    background-color: greenyellow;
+    /* display: none; */
   }
   
   .subnav-content {
     display: none;
     position: absolute;
     left: 0;
-    background-color: red;
+    /* background-color: red; */
+    background-color: greenyellow;
     width: 100%;
     z-index: 1;
   }
   
   .subnav-content a {
     float: left;
-    color: white;
+    display: none;
+    color: black;
     text-decoration: none;
   }
   
   .subnav-content li:hover {
-    background-color: #eee;
+    background-color: black;
     color: black;
-    display: inline;
+    /* display: inline; */
+    display: none;
   }
   
   .subnav:hover .subnav-content {
-    display: block;
+    /* display: block; */
+    display: none;
   }
   .subnav-content ul li{
-  display: block;
+  display: none;
   margin: 10px 0;
   }
   .arrow {
@@ -78,6 +95,15 @@ body {
     /* margin-left: 10px 10px; */
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .sticky + .slideshow-container {
+    padding-top: 60px;
   }
 
   /*/ 
